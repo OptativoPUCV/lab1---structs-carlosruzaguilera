@@ -11,12 +11,80 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) { return 0; }
 
+int findMax(int arr[], int size) {
+    if (size <= 0) {
+        return -1; // Valor de error, suponiendo que no tengas valores negativos en tu arreglo.
+    }
+
+    int max = arr[0];  // Asumimos que el primer elemento es el máximo.
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max) {
+            max = arr[i];  //encontramos un valor más grande, lo actualizamos.
+        }
+    }
+
+    return max;
+}
+int main() {
+    int array[] = {1, 3, 5, 7, 9, 0, 8, 6, 4, 2};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    int max_value = findMax(array, size);
+    if (max_value != -1) {
+        printf("El valor máximo del arreglo es: %d\n", max_value);
+    } else {
+        printf("El arreglo está vacío o tiene un tamaño no válido.\n");
+    }
+
+    return 0;
+}
+
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {}
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void reverseArray(int arr[], int size) {
+    int start = 0;
+    int end = size - 1;
+
+    while (start < end) {
+        swap(&arr[start], &arr[end]);
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    printf("Arreglo original: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    reverseArray(array, size);
+
+    printf("Arreglo invertido: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
 
 /*
 Ejercicio 3: Filtrar Números Pares
@@ -25,6 +93,8 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+
+
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
