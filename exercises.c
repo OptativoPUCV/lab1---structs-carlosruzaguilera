@@ -71,7 +71,7 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 //void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       //int result[]) {}
 
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
     int i = 0, j = 0, k = 0;
