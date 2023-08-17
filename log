@@ -59,3 +59,32 @@ exercises.c:29:5: note: previous definition of ‘main’ with type ‘int()’
       |     ^~~~
 Compilation failed
 599740f
+Thu 17 Aug 2023 08:46:57 PM UTC: 
+In file included from test.c:1:
+exercises.c:14:5: error: redefinition of ‘findMax’
+   14 | int findMax(int arr[], int size) {
+      |     ^~~~~~~
+exercises.c:12:5: note: previous definition of ‘findMax’ with type ‘int(int *, int)’
+   12 | int findMax(int arr[], int size) { return 0; }
+      |     ^~~~~~~
+exercises.c:56:6: error: redefinition of ‘reverseArray’
+   56 | void reverseArray(int arr[], int size) {
+      |      ^~~~~~~~~~~~
+exercises.c:48:6: note: previous definition of ‘reverseArray’ with type ‘void(int *, int)’
+   48 | void reverseArray(int arr[], int size) {}
+      |      ^~~~~~~~~~~~
+exercises.c:67:5: error: redefinition of ‘main’
+   67 | int main() {
+      |     ^~~~
+exercises.c:29:5: note: previous definition of ‘main’ with type ‘int()’
+   29 | int main() {
+      |     ^~~~
+test.c:382:5: error: redefinition of ‘main’
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+In file included from test.c:1:
+exercises.c:29:5: note: previous definition of ‘main’ with type ‘int()’
+   29 | int main() {
+      |     ^~~~
+Compilation failed
+845b8e8
