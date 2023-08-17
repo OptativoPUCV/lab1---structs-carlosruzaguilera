@@ -107,3 +107,9 @@ exercises.c:29:5: note: previous definition of ‘main’ with type ‘int()’
       |     ^~~~
 Compilation failed
 b1051f7
+Thu 17 Aug 2023 08:49:08 PM UTC: 
+ exercises.c | 69 +++----------------------------------------------------------
+ 1 file changed, 3 insertions(+), 66 deletions(-)
+ tests:  0|7
+total_score: 0/70
+47efd81
